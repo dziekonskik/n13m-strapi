@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   n13m-strapi:
     container_name: n13m-strapi
@@ -25,12 +25,12 @@ services:
       - ./.env:/opt/app/.env
       - ./public/uploads:/opt/app/public/uploads
     ports:
-      - '1337:1337'
+      - "1337:1337"
     networks:
       - n13m-strapi
     depends_on:
       - n13m-strapiDB
-      
+
   n13m-strapiDB:
     container_name: n13m-strapiDB
     platform: linux/amd64 #for platform error on Apple M1 chips
@@ -46,16 +46,16 @@ services:
       #- ./data:/var/lib/postgresql/data/ # if you want to use a bind folder
 
     ports:
-      - '5432:5432'
+      - "5433:5432"
     networks:
       - n13m-strapi
-      
+
   n13m-strapiAdminer:
     container_name: n13m-strapiAdminer
     image: adminer
     restart: unless-stopped
     ports:
-      - '9090:8080'
+      - "9090:8080"
     environment:
       - ADMINER_DEFAULT_SERVER=n13m-strapiDB
     networks:
