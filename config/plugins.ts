@@ -3,7 +3,7 @@ export default () => ({
     enabled: true,
     config: {
       playgroundAlways: false,
-      defaultLimit: 10,
+      depthLimit: 7,
       maxLimit: 20,
       apolloServer: {
         tracing: true,
