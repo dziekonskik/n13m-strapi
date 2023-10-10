@@ -12,25 +12,25 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Slug": {
+    "slug": {
       "type": "uid",
-      "targetField": "Name",
+      "targetField": "name",
       "required": true
     },
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "Description": {
+    "description": {
       "type": "richtext",
       "required": true,
       "minLength": 50
     },
-    "Price": {
+    "price": {
       "type": "integer",
       "required": true
     },
-    "Image": {
+    "images": {
       "type": "media",
       "multiple": true,
       "required": true,
@@ -52,6 +52,11 @@
       "relation": "manyToMany",
       "target": "api::collection.collection",
       "mappedBy": "products"
+    },
+    "tailored": {
+      "type": "boolean",
+      "default": false,
+      "required": false
     }
   }
 }

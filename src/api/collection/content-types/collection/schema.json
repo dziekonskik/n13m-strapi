@@ -27,6 +27,12 @@
       "relation": "manyToMany",
       "target": "api::product.product",
       "inversedBy": "collections"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "collections"
     }
   }
 }
